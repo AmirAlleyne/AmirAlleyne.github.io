@@ -558,6 +558,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
+  max-height: 300px;
   height: auto;
 }
 
@@ -584,6 +585,55 @@ progress {
   font-size: .875em;
 }
 
+.projectrow  {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns of equal width */
+  grid-gap: 40px 40px; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3.2rem;
+  flex: 0 0 100%;
+}
+@media (max-width: 991px) {
+  .projectrow {
+    /* Styles for small screens (e.g., stack items vertically) */
+    display: block; 
+  }
+}
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  padding: 3.2rem;
+}
+.containerv2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 3.2rem;
+  /* justify-content: space-between; */
+}
+
+.item {
+  flex: 0 0 25%;
+  padding: 10px;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.item:hover {
+  /* Add your hover styles here */
+  border-color: #02aab0;
+  background-color: #f0f0f0; /* Example: Change background color on hover */
+  transform: scale(1.05); /* Example: Scale slightly on hover */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Example: Add a shadow on hover */
+}
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
