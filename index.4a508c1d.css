@@ -622,9 +622,10 @@ progress {
   border: 2px solid black;
   border-radius: 1rem;
   display: flex;
+  height:100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Space out elements vertically */
+  align-items: stretch;
   margin-bottom: 10px;
 }
 .item:hover {
@@ -643,6 +644,16 @@ progress {
   margin-left: auto;
   margin-right: auto;
 }
+
+.middle-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  text-align: center;
+}
+
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -8106,7 +8117,7 @@ textarea.form-control-lg {
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 20px 0 !important;
 }
 
 .mb-5 {
@@ -12499,6 +12510,7 @@ section {
 
 #hero .hero-cta {
   display: flex;
+  margin-top: auto;
 }
 
 @media (max-width: 56.25em) {
@@ -12569,6 +12581,7 @@ section {
 
 #projects .project-wrapper__text-title {
   margin-bottom: 1.8rem;
+  margin-top: 0;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -12584,8 +12597,10 @@ section {
 }
 
 #projects .project-wrapper__image {
-  width: 90%;
-  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center;
 }
 
 @media (max-width: 75em) {
